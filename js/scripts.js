@@ -1,25 +1,41 @@
 
+player1 = {
+  roll: 0,
+  grandTotal: 0
+};
 
-  var array1 = [];
+player2 = {
+  roll: 0,
+  grandTotal: 0
+};
 
 $(document).ready(function(){
   
-function sumOne(){
-  return Math.floor(Math.random()*(7 - 1) + 1)
-};
+  function sumOne(){
+    return Math.floor(Math.random()*(7 - 1) + 1)
+  };
+ 
 
+  $("form#formOne").submit(function(event){
+    event.preventDefault();
+    var roll1 = sumOne();
 
-$("form#formOne").submit(function(event){
-  event.preventDefault();
-  var roll1 = sumOne();
-
-  console.log(roll1)
-  $('#placeholder').text(roll1);
+    console.log(roll1)
+    $('#placeholder').text(roll1);
+    
+   
+    player1.roll += roll1;
+  });
   
-  array1.push(roll1)
-var reducer = (accumulator, currentValue) => accumulator + currentValue;
-var totalScore = array1.reduce(reducer);
-console.log(totalScore)
-console.log(array1)
+  $("form#formTwo").submit(function(event){
+    event.preventDefault();
+    
+
+    player1.grandTotal += player1.roll;
+    $('#placeholder2').text(player1.grandTotal);
+    console.log(player1)
+  });
+  
 });
-});
+
+
