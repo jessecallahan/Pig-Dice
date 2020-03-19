@@ -4,7 +4,6 @@
 }
 
 
-
 img {
   height: 40px;
   width: 40px;
@@ -62,8 +61,16 @@ img {
 } */
 
 
+#one {
+background-color: rgb(64, 203, 64);
+color: white;
+}
 
-
+#two {
+  background-color: rgb(212, 212, 0);
+  color: white;
+  }
+  
 .loss1 { 
   text-align: center;
   display: show;
@@ -77,3 +84,8 @@ img {
   width: 250px;
         float: right;
 }
+
+.navy{
+  padding-top: 50px;
+}
+

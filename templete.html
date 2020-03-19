@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Pig Dice</h1>
+        </div>
+        <hr>
+        <!-- <div class="row">
+      <p>Player 1 Roll Sheet: <div id="diceroll1"></div>
+      </p>
+    </div>
+    <div class="row">
+      <p>
+        Player 2 Roll Sheet: <div id="diceroll2"></div>
+      </p>
+    </div> -->
+
+        <div class="row">
+            <div class="col-sm p-3 mb-2 bg-success text-white">
+                <h2>Player 1</h2>
+                This rounds score:<div id="showRoundScore">0</div>
+                <div class="container1">
+                    <p id="roundTotal1">0</p>
+                </div>
+            </div>
+
+
+            <div class="col-sm p-3 mb-2 bg-warning text-white">
+
+                <h2>Player 2</h2>
+                This rounds score:<div id="showRoundScore2">0</div>
+                <div class="container2">
+                    <p id="roundTotal2">0</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="loss1">
+
+            <p id="player1roll"><img src="img/dice-six-faces-one.png"></img></p>
+            <form id="playerFormOne">
+                <button class="button" type="submit">Roll</button>
+                <br>
+            </form>
+            <br>
+            <form id="playerFormTwo">
+                <button class="button1" type="submit">Hold</button>
+                <br>
+            </form>
+        </div>
+
+
+
+        <!-- here's player 2  -->
+
+
+        <div class="loss2">
+            <p id="player2roll"><img src="img/dice-six-faces-one.png"></img></p>
+            <form id="player2FormOne">
+                <button class="button" type="submit">Roll</button>
+                <br>
+            </form>
+            <br>
+            <form id="player2FormTwo">
+                <button class="button1" type="submit">Hold</button>
+                <br>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

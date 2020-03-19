@@ -1,52 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <title>Jesse Callahan's Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery-3.4.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Pig Dice</title>
-  <title></title>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Pig Dice</h1>
+  <nav class=navy>
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li><a href="https://jessecallahan.github.io/Jesse-Portfolio/">Home</a></li>
+        <li><a href="https://jessecallahan.github.io/Jesse-Portfolio/contact.html">Contact</a></li>
+
+        <li class="active" class="dropdown">
+          <a href="https://jessecallahan.github.io/Jesse-Portfolio/work.html" class="dropdown-toggle"
+            data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Work<span
+              class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://jessecallahan.github.io/Jesse-Portfolio/work.html">All Projects</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="https://jessecallahan.github.io/Pig-Dice/">Pig Dice</a></li>
+            <li><a href="https://jessecallahan.github.io/Pandemic-game/">Pandemic</a></li>
+            <li><a href="https://jessecallahan.github.io/pizza-parlor/">Pizza Parlor</a></li>
+            <li><a href="https://jessecallahan.github.io/Jesse-Portfolio/work/calculator.html">JS
+                Calculator</a>
+            </li>
+            <li><a href="https://jessecallahan.github.io/Jesse-Portfolio/work/color.html">Color Input</a>
+            </li>
+            <li><a href="https://jessecallahan.github.io/Jesse-Portfolio/work/beep.html">Beep Boop</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
+
+  </nav>
+
+
+
+  <div class="container">
+
+    <h1 class="jumbotron">Pig Dice</h1>
+
+    <div>
+      <p class=" work-description bg-warning" style="margin-top: 20px; text-align:left">JavaScript verison of
+        the
+        classic dice game "Pig Dice". </p>
+      <p class="work-description bg-warning" style="margin-top: 20px; text-align:left">JRules: Roll until you
+        want
+        to hold. When you hold,
+        the dice
+        are passed and the round score is added to your total score. If you hit a one, the dice pass
+        automatically
+        and you lose that round score. First one to 100 wins. </p>
+      <p class="work-description bg-warning" style="margin-top: 20px; text-align:left">JThis project furthered
+        my
+        knowledge of objects, how to
+        store and change key values within them, and behavior driven development. The github can be found <a
+          href="https://github.com/jessecallahan/Pizza-parlor" target="_blank">here</a>. Enjoy!</p>
+    </div>
+
+
     <hr>
     <!-- <div class="row">
-      <p>Player 1 Roll Sheet: <div id="diceroll1"></div>
-      </p>
-    </div>
-    <div class="row">
-      <p>
-        Player 2 Roll Sheet: <div id="diceroll2"></div>
-      </p>
-    </div> -->
+                  <p>Player 1 Roll Sheet: <div id="diceroll1"></div>
+                  </p>
+                </div>
+                <div class="row">
+                  <p>
+                    Player 2 Roll Sheet: <div id="diceroll2"></div>
+                  </p>
+                </div> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-white" id="one">
+          <h2>Player 1</h2>
+          This rounds score:<div id="showRoundScore">0</div>
+          <div class="container1">
+            <p id="roundTotal1">0</p>
+          </div>
+        </div>
 
-    <div class="row">
-      <div class="col-sm p-3 mb-2 bg-success text-white">
-        <h2>Player 1</h2>
-        This rounds score:<div id="showRoundScore">0</div>
-        <div class="container1">
-          <p id="roundTotal1">0</p>
+
+        <div class="col-md-6 text-white" id="two">
+
+          <h2>Player 2</h2>
+          This rounds score:<div id="showRoundScore2">0</div>
+          <div class="container2">
+            <p id="roundTotal2">0</p>
+          </div>
         </div>
       </div>
-
-
-      <div class="col-sm p-3 mb-2 bg-warning text-white">
-
-        <h2>Player 2</h2>
-        This rounds score:<div id="showRoundScore2">0</div>
-        <div class="container2">
-          <p id="roundTotal2">0</p>
-        </div>
-      </div>
     </div>
-
-
+    <br>
     <div class="loss1">
 
       <p id="player1roll"><img src="img/dice-six-faces-one.png"></img></p>
@@ -81,5 +134,32 @@
   </div>
 
 </body>
+<div style="padding-bottom: 50px"></div>
+<div class="footer">
+  <div class="container text-center">
+    <footer>
+      <p>
+        <h3>HI.</h3>
+        I'm Jesse, I am trying to get into the tech industry. I have a background in digital
+        media. I'm currently enrolled at Epicodus programming school where I'm learning front
+        end techniques, Advanced Javascript and React. You can check out all my work in the <a
+          href="https://jessecallahan.github.io/Jesse-Portfolio/work.html">work</a> section.
+      </p>
+      <p>
+        <h3>FIND ME ON THE WEB</h3>
+        Here is my <a href="https://www.linkedin.com/in/jessetylercallahan">LinkedIn</a> page and my <a
+          href="https://github.com/jessecallahan">GitHub</a>.
+        Follow me! I'll Follow back! I love meeting and
+        sharing with people.
+      </p>
+      <p>
+        <h3>CHECK OUT MY MEDIA PORTFOLIO</h3>
+        Here is my <a href="https://jessecallahanswork.wordpress.com/">link</a> to things I've done in
+        public
+        radio, film and animation.
+      </p>
+    </footer>
+  </div>
+</div>
 
 </html>
