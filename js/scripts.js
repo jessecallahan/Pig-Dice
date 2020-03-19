@@ -66,7 +66,7 @@ $(document).ready(function () {
     $(".loss2").show();
     $(".loss1").hide();
     if (player1.grandTotal >= 100) {
-      alert("Player 1 Won!");
+      alert("Player 1 Won!") ? "" : location.reload();;
     }
     console.log(player1)
   });
@@ -131,7 +131,7 @@ $(document).ready(function () {
     console.log(player2)
     console.log(player1.grandTotal);
     if (player2.grandTotal >= 100) {
-      alert("Player 2 Won!");
+      alert("Player 2 Won!") ? "" : location.reload();;
     }
   });
 
