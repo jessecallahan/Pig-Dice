@@ -77,12 +77,14 @@ color: white;
   width: 250px;
         float: left;
         float: center;
+        margin-left: 165px;
 }
 .loss2 {
   text-align: center;
   display: none;
   width: 250px;
         float: right;
+        margin-right: 145px;
 }
 
 .navy{

@@ -1,24 +1,23 @@
 
-player1 = {
-  roll: 0,
-  grandTotal: 0
-};
+function Player() {
+  this.roll = 0;
+  this.grandTotal = 0;
+}
 
-player2 = {
-  roll: 0,
-  grandTotal: 0
-};
+Player.prototype.sumOne = function () {
+  let dice = Math.floor(Math.random() * (7 - 1) + 1)
+  return this.roll = dice
+}
 
 $(document).ready(function () {
 
-  function sumOne() {
-    return Math.floor(Math.random() * (7 - 1) + 1)
-  };
-
+  let player1 = new Player();
+  let player2 = new Player();
 
   $("form#playerFormOne").submit(function (event) {
+
     event.preventDefault();
-    var roll1 = sumOne();
+    var roll1 = player1.sumOne();
 
 
     //$('#diceroll1').append(roll1 + ", ");
@@ -73,13 +72,11 @@ $(document).ready(function () {
 
 
   //player 2 ////////////////////////////
-  // $(document).ready(function(){
-
-
 
   $("form#player2FormOne").submit(function (event) {
     event.preventDefault();
-    var roll2 = sumOne();
+
+    var roll2 = player2.sumOne();
 
 
     console.log(roll2)
@@ -120,8 +117,6 @@ $(document).ready(function () {
 
   $("form#player2FormTwo").submit(function (event) {
     event.preventDefault();
-
-
     player2.grandTotal += player2.roll;
     $('#roundTotal2').text(player2.grandTotal);
     $("#showRoundScore2").text(0);
